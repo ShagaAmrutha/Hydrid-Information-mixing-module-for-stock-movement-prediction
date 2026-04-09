@@ -78,3 +78,36 @@ Follow these steps to run the project locally.
    ```bash
    git clone [https://github.com/shaga-amrutha/Hybrid-HIMM-Trading.git](https://github.com/shaga-amrutha/Hybrid-HIMM-Trading.git)
    cd Hybrid-HIMM-Trading
+2. **Install Dependencies**
+    ```bash
+      pip install -r requirements.txt
+      Run the Application
+
+3. **Run the APplication
+    ```bash
+   streamlit run app.py
+
+
+
+##🧠 How It Works
+
+Select Asset: Enter any ticker (e.g., RELIANCE.NS or BTC-USD).
+Feature Extraction: The system pulls 60 periods of price data and latest news headlines.
+Sentiment Encoding: BERT processes the headlines to determine Bullish or Bearish sentiment.
+Temporal Analysis: GRU identifies current price trend momentum.
+HIMM Fusion: The mixing module combines these inputs for a directional probability.
+Visualization: The dashboard plots the signal (Buy/Sell) directly on the IST-standardized chart.
+
+##🔮 Future Scope
+
+Integration with live trading APIs for automated execution
+Enhanced sentiment analysis using multilingual financial news
+Incorporation of macroeconomic indicators (inflation, interest rates)
+Deployment using Docker and cloud platforms (AWS/GCP)
+
+##🤝 Contact
+
+Name: Shaga Amrutha
+Email: shagaamrutha@gmail.com
+
+Project Link: https://github.com/shaga-amrutha/Hybrid-HIMM-Trading
