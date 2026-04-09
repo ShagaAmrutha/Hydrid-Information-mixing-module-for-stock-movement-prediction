@@ -1,6 +1,80 @@
-# Hydrid-Information-mixing-module-for-stock-movement-prediction
-💠 Hybrid Information Mixing Module (HIMM)Multimodal Deep Learning for Financial Market Forecasting📖 Project OverviewThe Hybrid Information Mixing Module (HIMM) is an end-to-end stock movement prediction system. Traditional models often suffer from "lag" because they only analyze past price action. HIMM solves this by fusing real-time news sentiment with temporal price sequences using a proprietary interaction-mixing architecture.The project is synchronized to Indian Standard Time (IST) and provides a high-fidelity, TradingView-style interface for real-time analysis.🧠 System ArchitectureThe model utilizes a dual-pipeline approach to process multimodal inputs:1. The Semantic Pipeline (NLP)Model: BERT (Bidirectional Encoder Representations from Transformers).Function: Processes unstructured financial news headlines. It converts text into 768-dimensional embeddings that represent market "mood" or sentiment.2. The Temporal Pipeline (Deep Learning)Model: GRU (Gated Recurrent Unit).Function: Analyzes a 60-period sliding window of OHLC (Open, High, Low, Close) data. GRUs are utilized for their efficiency in capturing long-term dependencies in volatile time-series data.3. HIMM Fusion LayerMethod: Interaction-Mixing MLP.Logic: Rather than simple concatenation, the model performs feature mixing to identify how specific news contexts (e.g., "Interest rate hike") specifically impact price momentum (e.g., "Oversold RSI").🛠️ Key Technical FeaturesIST Standard Timeline: Automatic timezone normalization using pytz to align global market data with Indian trading hours.Interactive 3-Pane Terminal:Main Pane: Candlestick charts with EMA 50 and dynamic BUY/SELL markers.Indicator Pane: Real-time RSI (Relative Strength Index) calculation.Volume Pane: Color-coded volume histograms for liquidity analysis.Dynamic Confidence Gauge: Visualizes the model's predictive probability ($0$ to $100\%$).Adjustable Sensitivity: A slider-based epsilon ($\epsilon$) control to filter market noise and recalibrate signal frequency.🚀 Installation & DeploymentPrerequisitesPython 3.10+Trained model.h5 file (must be placed in the root directory)StepsClone the repository:Bashgit clone https://github.com/YourUsername/Hybrid-Information-Mixing-Module.git
-cd Hybrid-Information-Mixing-Module
-Install dependencies:Bashpip install -r requirements.txt
-Run the application:Bashstreamlit run app.py
-📊 Ticker Formatting GuideTo ensure the data engine functions correctly, use the following formats:Indian Stocks: RELIANCE.NS, TCS.NS, INFY.NSCrypto: BTC-USD, ETH-USDIndices: ^NSEI (Nifty 50), ^NSEBANKForex: EURUSD=X, GBPUSD=X📝 LicenseThis project is developed for educational and research purposes in the field of Multimodal Deep Learning.Final Tip: After you upload this, go to your GitHub repository settings and add "Stock Prediction", "Deep Learning", and "Streamlit" as topics so it's easier for others to find!
+# 💠 Hybrid Information Mixing Module (HIMM) for Stock Market Prediction
+
+A Multimodal Deep Learning System that fuses **BERT-based Sentiment Analysis** and **GRU-based Temporal Modeling** to provide high-accuracy market signals. Built with Python & Streamlit, it delivers real-time IST-synchronized charts and interaction-mixing predictions for data-driven trading decisions.
+
+---
+
+## 📈 Hybrid AI-Driven Financial Forecasting System
+
+A Real-Time Financial Dashboard that uses a **Hybrid Information Mixing Module (HIMM)** to analyze news sentiment and price action simultaneously to predict trend direction.
+
+---
+
+## 📖 Table of Contents
+* [About the Project](#-about-the-project)
+* [Key Features](#-key-features)
+* [Tech Stack](#-tech-stack)
+* [System Architecture](#-system-architecture)
+* [Installation & Setup](#-installation--setup)
+* [How It Works](#-how-it-works)
+* [Future Scope](#-future-scope)
+* [Contact](#-contact)
+
+---
+
+## 📌 About The Project
+Retail traders often struggle with emotional decision-making and reliance on lagging indicators that only reflect past market behavior. Existing tools fail to account for the impact of global news sentiment on market volatility.
+
+This project solves that gap. It is a **Hybrid Analytical System** that combines:
+* **Semantic Analysis:** Uses **BERT** to translate unstructured financial headlines into mathematical sentiment weights.
+* **Temporal Modeling:** Employs **GRU (Gated Recurrent Units)** to identify patterns in 60-period historical price sequences.
+* **Interaction Mixing:** Features a custom **MLP Fusion Layer** that identifies non-linear correlations between news and momentum to filter out market noise.
+
+---
+
+## 🚀 Key Features
+
+🔮 **Multimodal AI Fusion:** Fuses BERT (NLP) and GRU (Time-Series) for a holistic market view.
+📊 **Interactive Pro Charts:** Professional-grade, zoomable 3-Pane candlestick charts (Price, RSI, Volume) powered by `lightweight-charts`.
+🇮🇳 **IST Standard Synchronization:** Automatically aligns global market data (UTC) to **Indian Standard Time (IST)**.
+🎯 **Dynamic Signal Sensitivity:** User-adjustable confidence thresholds to calibrate model risk and signal frequency.
+🌍 **Universal Asset Support:** Analyzes **Indian Stocks** (.NS), **Crypto** (BTC-USD), and **Forex** via Yahoo Finance.
+
+---
+
+## 🛠 Tech Stack
+
+| Component | Technology | Description |
+| :--- | :--- | :--- |
+| **Language** | Python 3.10 | Core Logic & ML Pipeline |
+| **Frontend** | Streamlit | Web Dashboard & UI |
+| **NLP Core** | BERT (HuggingFace) | News Sentiment Extraction |
+| **Temporal Core** | GRU (TensorFlow) | Sequence Pattern Recognition |
+| **Visuals** | Lightweight Charts v5 | TradingView-Standard Charts |
+| **API** | yfinance | Live OHLC Market Data |
+
+---
+
+## 🏗 System Architecture
+
+The system follows a **4-Layer Multimodal Architecture**:
+1. **Data Layer:** Fetches live OHLCV data and real-time news via Yahoo Finance and RSS feeds.
+2. **Processing Layer:** Standardizes timezones to IST and calculates Technical Indicators (EMA, RSI).
+3. **Intelligence Layer:** Fuses BERT embeddings and GRU hidden states through the **HIMM Interaction-Mixing MLP**.
+4. **Presentation Layer:** Renders the Gauge confidence meter and dynamic Buy/Sell markers on the dashboard.
+
+---
+
+## ⚡ Installation & Setup
+
+Follow these steps to run the project locally.
+
+### Prerequisites
+* Python 3.10 or higher.
+* Trained `model.h5` file placed in the project root directory.
+
+### Steps
+1. **Clone the Repository**
+   ```bash
+   git clone [https://github.com/shaga-amrutha/Hybrid-HIMM-Trading.git](https://github.com/shaga-amrutha/Hybrid-HIMM-Trading.git)
+   cd Hybrid-HIMM-Trading
