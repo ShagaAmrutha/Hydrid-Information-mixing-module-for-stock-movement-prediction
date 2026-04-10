@@ -7,3 +7,4 @@ tensorflow
 transformers
 torch
 matplotlib
+lightweight-charts-v5
