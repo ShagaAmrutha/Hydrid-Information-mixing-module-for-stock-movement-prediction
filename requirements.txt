@@ -1,10 +1,10 @@
 streamlit
 yfinance
-pandas
-numpy
-scikit-learn
+pytz
 tensorflow
 transformers
-torch
-matplotlib
+feedparser
+plotly
+numpy
+pandas
 lightweight-charts-v5
